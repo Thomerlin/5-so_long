@@ -5,7 +5,7 @@ int	counter_line(t_map *map, int fd1);
 int	counter_col(t_map *map, int fd1, char *argv);
 int	more_verify(char *argv);
 
-int	check_map_valid(t_map *map, int argc, int **argv)
+int	check_map_valid(t_map *map, int argc, char **argv)
 {
 	if (argc == 1)
 	{
