@@ -16,9 +16,9 @@ int	check_map_valid(t_map *map, int argc, char **argv)
 		print_string("Seá utilizado apenas o primeiro argumento\n");
 	if (!check_extension(argv[1], ".ber"))
 		return (0);
-	if (!check_struct(map, argv[1]))
+	if (!check_map_struct(map, argv[1]))
 		return (0);
-	if (!more_one(argv[1]))
+	if (!more_verify(argv[1]))
 		return (0);
 	map->map_all = check_number_map(map, argv[1]);
 	if (map->map_all == 0)
