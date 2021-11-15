@@ -6,7 +6,7 @@
 /*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:31:36 by tyago-ri          #+#    #+#             */
-/*   Updated: 2021/11/15 15:33:23 by tyago-ri         ###   ########.fr       */
+/*   Updated: 2021/11/15 17:44:03 by tyago-ri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <fcntl.h>
 # include <limits.h>
 
-# include "./src/utils/mlx/mlx.h"
+# include "./src/utils/minilibx-linux/mlx.h"
 # include "./src/utils/gnl/get_next_line.h"
 
 typedef struct s_game
