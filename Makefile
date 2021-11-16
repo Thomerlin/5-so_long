@@ -2,13 +2,13 @@ PATH_SRC = ./src/
 PATH_GAME = ./src/game/
 PATH_MAP = ./src/map/
 PATH_GNL = ./src/utils/gnl/
-PATH_MINILBX = ./src/utils/minilbx-linux/
+PATH_MINILIBX = ./src/utils/minilibx-linux/
 PATH_OBJS = ./objs/
 
-MLX = $(PATH_MINILBX)libmlx.a
+MLX = $(PATH_MINILIBX)libmlx.a
 NAME = so_long
 
-FILES = $(PATH_MAP)check_map.c $(PATH_MAP)map_check_utils.c $(PATH_MAP)map_utils.c\
+FILES = $(PATH_MAP)check_map.c $(PATH_MAP)check_map_more.c $(PATH_MAP)map_utils.c\
 		$(PATH_SRC)utils.c $(PATH_SRC)so_long.c \
 		$(PATH_SRC)utils_score.c $(PATH_GAME)init_game.c \
 		$(PATH_GAME)move.c $(PATH_GAME)print_map.c \
@@ -19,14 +19,14 @@ OBJS = $(patsubst $(PATH_SRC)%.c, $(PATH_OBJS)%.o, $(FILES))
 
 CC = clang
 CFLAGS = -Wextra -Werror -Wall
-MLXFLAGS = -I $(PATH_MINILBX) -L $(PATH_MINILBX) -lmlx -Ilmlx -lXext -lX11
+MLXFLAGS = -I $(PATH_MINILIBX) -L $(PATH_MINILIBX) -lmlx -Ilmlx -lXext -lX11
 RM = rm -rf
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo done!!
-	@make -C $(PATH_MINILBX)
+	@make -C $(PATH_MINILIBX)
 	@$(CC) $(CFLAGS) $(MLXFLAGS) $(OBJS) $(MLX) -o so_long
 	@echo program done!
 
@@ -44,7 +44,7 @@ clean:
 	@echo obj removed!
 
 fclean: clean
-	make clean -C $(PATH_MINILBX)
+	make clean -C $(PATH_MINILIBX)
 	$(RM) $(NAME)
 	@echo clean everything
 

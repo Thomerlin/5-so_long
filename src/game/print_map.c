@@ -22,7 +22,7 @@ int	print_map(t_map *map)
 				print_sprite(map, col, line, "./src/utils/assets/icefloor.xpm");
 			if (map->map_all[line][col] == 'P' || map->map_all[line][col] == 'C'
 				|| map->map_all[line][col] == 'E')
-				print_sprite(map, col, line);
+				print_player(map, col, line);
 			if (map->map_all[line][col] == '0')
 				print_sprite(map, col, line, "./src/utils/assets/floor.xpm");
 			col++;
@@ -60,9 +60,9 @@ void	print_steps(t_map *map)
 	steps = ft_calloc(sizeof(char), 100);
 	counter = ft_itoa(map->game->qnt_move);
 	ft_strlcopy(steps, "scores: ", 8);
-	ft_strlcopy(&steps[ft_strlen(steps)], counter, ft_srtlen(counter) + 1);
-	mlx_string_put(map->mlx, map->window, map->count_col
-		* 64 / 2 - 26, 10, 0x00FF0000, steps);
+	ft_strlcopy(&steps[ft_strlen(steps)], counter, ft_strlen(counter) + 1);
+	mlx_string_put(map->mlx, map->window, (map->count_col
+		* 64) / 2 - 26, 10, 0x00FF0000, steps);
 	free(counter);
 	free(steps);
 }

@@ -43,7 +43,7 @@ char	**check_number_map(t_map *map, char *argv)
 		free_mapvar(map, map_var);
 		return (0);
 	}
-	while (get_nex_line(fd1, &map_var[i++]))
+	while (get_next_line(fd1, &map_var[i++]))
 		;
 	if (!check_all_map(map, map_var))
 		return (0);
