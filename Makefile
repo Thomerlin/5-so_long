@@ -53,4 +53,4 @@ re: fclean all
 .PHONY: re all fclean clean
 
 test:	
-	$(CC) -fsanitize=leak $(MLXFLAGS) $(CFLAGS) $(PATH_SRC)so_long.c $(FILES) ./minilibx/libmlx.a -o so_long
+	$(CC) -fsanitize=leak $(MLXFLAGS) $(CFLAGS) $(PATH_SRC)so_long.c $(FILES) ./minilibx-linux/libmlx.a -o so_long
