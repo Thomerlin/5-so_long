@@ -1,6 +1,6 @@
 PATH_SRC = ./src/
 PATH_GAME = ./src/game/
-PATH_MAP = ./src/check_map/
+PATH_MAP = ./src/checkmap/
 PATH_GNL = ./utils/gnl/
 PATH_MINILIBX = ./utils/minilibx-linux/
 PATH_OBJS = ./objs/
@@ -32,7 +32,7 @@ $(NAME): $(OBJS)
 
 $(PATH_OBJS)%.o:	$(PATH_SRC)%.c
 	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)map
+	@mkdir -p $(PATH_OBJS)checkmap
 	@mkdir -p $(PATH_OBJS)utils/gnl
 	@mkdir -p $(PATH_OBJS)game
 	$(CC) $(CFLAGS) -I. -c $< -o $@
