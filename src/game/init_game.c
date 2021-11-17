@@ -6,8 +6,8 @@ int		key_hook(int keycode, t_map *map);
 int	init_game(t_map *map)
 {
 	map->mlx = mlx_init();
-	map->window = mlx_new_window(map->mlx, map->count_col * 64,
-			map->count_line * 64, "leave the door");
+	map->window = mlx_new_window(map->mlx, map->count_col * 21,
+			map->count_line * 21, "Vá para saida");
 	print_map(map);
 	mlx_key_hook(map->window, key_hook, map);
 	mlx_hook(map->window, 9, 1L << 21, &print_map, map);
@@ -30,6 +30,7 @@ int	key_hook(int keycode, t_map *map)
 		end_game(map);
 	if (keycode == 65307)
 		end_game(map);
+	display_info(map);
 	print_steps(map);
 	return (keycode);
 }

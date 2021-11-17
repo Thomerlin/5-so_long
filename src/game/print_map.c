@@ -4,6 +4,7 @@ int		print_sprite(t_map *map, int col, int line, char *path);
 int		print_player(t_map *map, int col, int line);
 void	nothing_move(t_map *map);
 void	print_steps(t_map *map);
+int		display_info(t_map *map);
 
 int	print_map(t_map *map)
 {
@@ -19,7 +20,7 @@ int	print_map(t_map *map)
 			if (map->map_all[line][col] == '1')
 				print_sprite(map, col, line, "./src/utils/assets/wall.xpm");
 			if (map->map_all[line][col] == 'V')
-				print_sprite(map, col, line, "./src/utils/assets/icefloor.xpm");
+				print_sprite(map, col, line, "./src/utils/assets/enemy.xpm");
 			if (map->map_all[line][col] == 'P' || map->map_all[line][col] == 'C'
 				|| map->map_all[line][col] == 'E')
 				print_player(map, col, line);
@@ -46,7 +47,7 @@ int	print_sprite(t_map *map, int col, int line, char *path)
 	map->image = mlx_xpm_file_to_image(map->mlx, path,
 			&map->program->x, &map->program->y);
 	mlx_put_image_to_window(map->mlx, map->window, map->image,
-		col * 64, line * 64);
+		col * 21, line * 21);
 	mlx_destroy_image(map->mlx, map->image);
 	print_steps(map);
 	return (1);
@@ -59,12 +60,18 @@ void	print_steps(t_map *map)
 
 	steps = ft_calloc(sizeof(char), 100);
 	counter = ft_itoa(map->game->qnt_move);
-	ft_strlcopy(steps, "scores: ", 8);
+	ft_strlcopy(steps, "Moves: ", 8);
 	ft_strlcopy(&steps[ft_strlen(steps)], counter, ft_strlen(counter) + 1);
 	mlx_string_put(map->mlx, map->window, (map->count_col
-		* 64) / 2 - 26, 10, 0x00FF0000, steps);
+		* 21) / 2 - 42, 50, 0x0087CEFA, steps);
 	free(counter);
 	free(steps);
+}
+
+int	display_info(t_map *map)
+{	
+	printf("moves: %d\n", map->game->qnt_move);
+	return (1);
 }
 
 int	print_player(t_map *map, int col, int line)
@@ -78,15 +85,15 @@ int	print_player(t_map *map, int col, int line)
 		map->game->pos_line = line;
 		map->game->pos_col = col;
 		if (map->game->up == 'w')
-			print_sprite(map, col, line, "./src/utils/assets/player.xpm");
+			print_sprite(map, col, line, "./src/utils/assets/p_back.xpm");
 		else if (map->game->left == 'a')
-			print_sprite(map, col, line, "./src/utils/assets/player.xpm");
+			print_sprite(map, col, line, "./src/utils/assets/p_left.xpm");
 		else if (map->game->right == 'd')
-			print_sprite(map, col, line, "./src/utils/assets/player.xpm");
+			print_sprite(map, col, line, "./src/utils/assets/p_right.xpm");
 		else if (map->game->down == 's')
-			print_sprite(map, col, line, "./src/utils/assets/player.xpm");
+			print_sprite(map, col, line, "./src/utils/assets/p_down.xpm");
 		else
-			print_sprite(map, col, line, "./src/utils/assets/playe.xpm");
+			print_sprite(map, col, line, "./src/utils/assets/p_down.xpm");
 	}
 	return (1);
 }

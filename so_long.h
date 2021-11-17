@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:31:36 by tyago-ri          #+#    #+#             */
-/*   Updated: 2021/11/15 17:44:03 by tyago-ri         ###   ########.fr       */
+/*   Updated: 2021/11/16 19:54:53 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int		end_game(void *test);
 void	free_mapvar(t_map *map, char **map_var);
 void	print_steps(t_map *map);
 int		map_utils(int fd1);
+int		display_info(t_map *map);
 
 size_t	ft_strlcopy(char *dst, const char *src, size_t n);
 char	*ft_itoa(int n);
