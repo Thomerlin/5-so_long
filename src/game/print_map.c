@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:03:31 by tyago-ri          #+#    #+#             */
-/*   Updated: 2021/11/17 15:07:35 by tyago-ri         ###   ########.fr       */
+/*   Updated: 2021/11/17 19:34:37 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	print_steps(t_map *map)
 	ft_strlcopy(steps, "Moves: ", 8);
 	ft_strlcopy(&steps[ft_strlen(steps)], counter, ft_strlen(counter) + 1);
 	mlx_string_put(map->mlx, map->window, (map->count_col
-			* 21) / 2 - 42, 50, 0x0087CEFA, steps);
+			* 21) / 2 - 23, 55, 0x0000e1ff, steps);
 	free(counter);
 	free(steps);
 }

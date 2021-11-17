@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:03:37 by tyago-ri          #+#    #+#             */
-/*   Updated: 2021/11/17 15:03:38 by tyago-ri         ###   ########.fr       */
+/*   Updated: 2021/11/17 19:21:29 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	move_up(t_map *map)
 	if (map->map_all[map->game->pos_line - 1][map->game->pos_col] == 'E' &&
 		map->game->qnt_collect == 0)
 	{
-		print_string("Win");
+		print_string("Win\n");
 		end_game(map);
 	}
 	map->game->qnt_move++;
@@ -58,7 +58,7 @@ int	move_left(t_map *map)
 	if (map->map_all[map->game->pos_line][map->game->pos_col - 1] == 'E' &&
 		map->game->qnt_collect == 0)
 	{
-		print_string("Win");
+		print_string("Win\n");
 		end_game(map);
 	}
 	map->game->qnt_move++;
@@ -87,7 +87,7 @@ int	move_right(t_map *map)
 	if (map->map_all[map->game->pos_line][map->game->pos_col + 1] == 'E' &&
 		map->game->qnt_collect == 0)
 	{
-		print_string("Win");
+		print_string("Win\n");
 		end_game(map);
 	}
 	map->game->qnt_move++;
