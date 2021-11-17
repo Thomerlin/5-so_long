@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map_more.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:03:51 by tyago-ri          #+#    #+#             */
-/*   Updated: 2021/11/17 15:03:52 by tyago-ri         ###   ########.fr       */
+/*   Updated: 2021/11/17 19:47:10 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	check_extension(char *str, char *extension)
 			i++;
 		else
 		{
-			print_string("Extensão do mapa inválido\n");
+			print_string("Extensao do mapa invalido\n");
 			return (0);
 		}
 	}

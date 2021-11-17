@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:03:44 by tyago-ri          #+#    #+#             */
-/*   Updated: 2021/11/17 15:03:45 by tyago-ri         ###   ########.fr       */
+/*   Updated: 2021/11/17 19:48:12 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	map_utils(int fd1)
 		{
 			count++;
 			if (count > 2)
-				return (print_string("Two or More \'P\' OR \'E\'"));
+				return (print_string("Dois ou mais \'P\' OR \'E\'"));
 		}
 		if ((buffer == 'P' || buffer == 'E' || buffer == 'C') && size > 0)
 			verify++;

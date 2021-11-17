@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:03:46 by tyago-ri          #+#    #+#             */
-/*   Updated: 2021/11/17 15:03:47 by tyago-ri         ###   ########.fr       */
+/*   Updated: 2021/11/17 19:47:37 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	check_map_valid(t_map *map, int argc, char **argv)
 		return (0);
 	}
 	if (argc > 2)
-		print_string("Seá utilizado apenas o primeiro argumento\n");
+		print_string("Sera utilizado apenas o primeiro argumento\n");
 	if (!check_extension(argv[1], ".ber"))
 		return (0);
 	if (!check_map_struct(map, argv[1]))
@@ -54,7 +54,7 @@ int	check_map_struct(t_map *map, char *argv)
 	res = map->count_arq2 / map->count_col2;
 	if (res != map->count_line)
 	{
-		print_string("Linhas e colunas inconrretas\n");
+		print_string("Linhas e colunas incorretas\n");
 		return (0);
 	}
 	else

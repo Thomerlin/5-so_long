@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:03:40 by tyago-ri          #+#    #+#             */
-/*   Updated: 2021/11/17 15:07:29 by tyago-ri         ###   ########.fr       */
+/*   Updated: 2021/11/17 19:48:25 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	init_game(t_map *map)
 {
 	map->mlx = mlx_init();
 	map->window = mlx_new_window(map->mlx, map->count_col * 21,
-			map->count_line * 21, "Vá para saida");
+			map->count_line * 21, "Va para saida");
 	print_map(map);
 	mlx_key_hook(map->window, key_hook, map);
 	mlx_hook(map->window, 9, 1L << 21, &print_map, map);
