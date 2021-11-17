@@ -1,8 +1,8 @@
 PATH_SRC = ./src/
 PATH_GAME = ./src/game/
-PATH_MAP = ./src/map/
-PATH_GNL = ./src/utils/gnl/
-PATH_MINILIBX = ./src/utils/minilibx-linux/
+PATH_MAP = ./src/check_map/
+PATH_GNL = ./utils/gnl/
+PATH_MINILIBX = ./utils/minilibx-linux/
 PATH_OBJS = ./objs/
 
 MLX = $(PATH_MINILIBX)libmlx.a

@@ -1,7 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_game.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tyago-ri <tyago-ri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/17 15:03:40 by tyago-ri          #+#    #+#             */
+/*   Updated: 2021/11/17 15:07:29 by tyago-ri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../so_long.h"
 
 int		end_game(void *test);
 int		key_hook(int keycode, t_map *map);
+
+int	display_info(t_map *map)
+{	
+	printf("moves: %d\n", map->game->qnt_move);
+	return (1);
+}
 
 int	init_game(t_map *map)
 {
